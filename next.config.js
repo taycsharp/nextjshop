@@ -28,7 +28,11 @@ const next_config = {
   webpack: (config, { dev, isServer }) => {
     if (!dev) {
       // Disable Fast Refresh in production
-      config.optimization.splitChunks.cacheGroups.shared.enforce = false;
+      config.optimization.splitChunks = {
+        cacheGroups: {
+          default: false,
+        },
+      };
     }
     return config;
   },

@@ -25,6 +25,13 @@ const next_config = {
   experimental: {
     optimizePackageImports: ["@styled-icons/bootstrap"],
   },
+  webpack: (config, { dev, isServer }) => {
+    if (!dev) {
+      // Disable Fast Refresh in production
+      config.optimization.splitChunks.cacheGroups.shared.enforce = false;
+    }
+    return config;
+  },
 };
 
 module.exports = next_config;

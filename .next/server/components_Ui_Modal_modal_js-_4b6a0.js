@@ -20,6 +20,23 @@ eval("// Exports\nmodule.exports = {\n\t\"overlay\": \"modal_overlay__6moOc\",\n
 
 /***/ }),
 
+/***/ "__barrel_optimize__?names=XLg!=!./node_modules/@styled-icons/bootstrap/index.esm.js":
+/*!*******************************************************************************************!*\
+  !*** __barrel_optimize__?names=XLg!=!./node_modules/@styled-icons/bootstrap/index.esm.js ***!
+  \*******************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   XLg: () => (/* reexport safe */ _XLg__WEBPACK_IMPORTED_MODULE_0__.XLg)
+/* harmony export */ });
+/* harmony import */ var _XLg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./XLg */ "./node_modules/@styled-icons/bootstrap/XLg/XLg.js");
+
+
+
+/***/ }),
+
 /***/ "./components/Ui/Modal/modal.js":
 /*!**************************************!*\
   !*** ./components/Ui/Modal/modal.js ***!

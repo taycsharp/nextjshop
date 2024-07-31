@@ -11,6 +11,34 @@
       "static/chunks/components_error_403_js.js"
     ]
   },
+  "../components/Auth/signin.js -> next/link": {
+    "id": "../components/Auth/signin.js -> next/link",
+    "files": [
+      "static/chunks/node_modules_next_link_js.js"
+    ]
+  },
+  "../components/Auth/signin.js -> ~/components/Ui/Button": {
+    "id": "../components/Auth/signin.js -> ~/components/Ui/Button",
+    "files": []
+  },
+  "../components/Dashboard/monthlySale.js -> react-apexcharts": {
+    "id": "../components/Dashboard/monthlySale.js -> react-apexcharts",
+    "files": [
+      "static/chunks/node_modules_react-apexcharts_dist_react-apexcharts_min_js.js"
+    ]
+  },
+  "../components/Dashboard/orderStatus.js -> react-apexcharts": {
+    "id": "../components/Dashboard/orderStatus.js -> react-apexcharts",
+    "files": [
+      "static/chunks/node_modules_react-apexcharts_dist_react-apexcharts_min_js.js"
+    ]
+  },
+  "../components/Dashboard/orderSummary.js -> react-apexcharts": {
+    "id": "../components/Dashboard/orderSummary.js -> react-apexcharts",
+    "files": [
+      "static/chunks/node_modules_react-apexcharts_dist_react-apexcharts_min_js.js"
+    ]
+  },
   "../components/Layout/Client/cartView.js -> ~/components/Image": {
     "id": "../components/Layout/Client/cartView.js -> ~/components/Image",
     "files": [
@@ -188,6 +216,70 @@
     "files": [
       "static/chunks/components_cookieContest_index_js.js"
     ]
+  },
+  "checkout/index.js -> ~/components/Checkout/checkoutNav": {
+    "id": "checkout/index.js -> ~/components/Checkout/checkoutNav",
+    "files": [
+      "static/chunks/components_Checkout_checkoutNav_js-_f1981.js"
+    ]
+  },
+  "checkout/index.js -> ~/components/Checkout/paymentGatewayList": {
+    "id": "checkout/index.js -> ~/components/Checkout/paymentGatewayList",
+    "files": [
+      "static/chunks/components_Checkout_paymentGatewayList_js.js"
+    ]
+  },
+  "checkout/index.js -> ~/components/Image": {
+    "id": "checkout/index.js -> ~/components/Image",
+    "files": [
+      "static/chunks/components_Image_index_js.js"
+    ]
+  },
+  "checkout/success/[id].js -> next/link": {
+    "id": "checkout/success/[id].js -> next/link",
+    "files": [
+      "static/chunks/node_modules_next_link_js.js"
+    ]
+  },
+  "checkout/success/[id].js -> ~/components/Checkout/checkoutNav": {
+    "id": "checkout/success/[id].js -> ~/components/Checkout/checkoutNav",
+    "files": [
+      "static/chunks/components_Checkout_checkoutNav_js-_f1980.js"
+    ]
+  },
+  "checkout/success/[id].js -> ~/components/Invoice": {
+    "id": "checkout/success/[id].js -> ~/components/Invoice",
+    "files": [
+      "static/chunks/components_Invoice_index_js.js"
+    ]
+  },
+  "checkout/success/[id].js -> ~/components/Invoice/print": {
+    "id": "checkout/success/[id].js -> ~/components/Invoice/print",
+    "files": [
+      "static/chunks/components_Invoice_print_js.js"
+    ]
+  },
+  "checkout/success/[id].js -> ~/components/Ui/Spinner": {
+    "id": "checkout/success/[id].js -> ~/components/Ui/Spinner",
+    "files": [
+      "static/chunks/components_Ui_Spinner_index_js.js"
+    ]
+  },
+  "checkout/success/[id].js -> ~/components/error/404": {
+    "id": "checkout/success/[id].js -> ~/components/error/404",
+    "files": [
+      "static/chunks/components_error_404_js.js"
+    ]
+  },
+  "checkout/success/[id].js -> ~/components/error/500": {
+    "id": "checkout/success/[id].js -> ~/components/error/500",
+    "files": [
+      "static/chunks/components_error_500_js.js"
+    ]
+  },
+  "checkout/success/[id].js -> ~/lib/clientFunctions": {
+    "id": "checkout/success/[id].js -> ~/lib/clientFunctions",
+    "files": []
   },
   "index.js -> ~/components/Banner/banner": {
     "id": "index.js -> ~/components/Banner/banner",

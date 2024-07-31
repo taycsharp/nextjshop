@@ -32,7 +32,7 @@ const OrderStatusChart = ({ statusData }) => {
         <ApexChart
           options={chartData.options}
           series={chartData.series}
-          type="polarArea"
+          type="pie"
           height={320}
         />
       )}

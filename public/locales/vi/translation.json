@@ -367,6 +367,13 @@
     "There are no questions asked yet. Please login or register to ask question": "Chưa có câu hỏi nào. Vui lòng đăng nhập hoặc đăng ký để đặt câu hỏi",
     "QTY": "Số lượng",
     "This product has no description": "Sản phẩm này không có mô tả",
-    "This product has no reviews yet": "Sản phẩm này chưa có đánh giá"
+    "This product has no reviews yet": "Sản phẩm này chưa có đánh giá",
+    "DELETE": "Xóa",
+    "EDIT": "Chỉnh sửa",
+    "CLONE": "Sao chép",
+    "failed to load": "Không tải được",
+    "Products": "Sản phẩm",
+    "Are you sure, you want to delete?": "Bạn có chắc chắn muốn xóa không?",
+    "Product Deleted Successfully": "Xóa sản phẩm thành công"
   }
   

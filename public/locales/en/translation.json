@@ -368,11 +368,11 @@
   "QTY": "QTY",
   "This product has no description": "This product has no description",
   "This product has no reviews yet": "This product has no reviews yet",
-  "DELETE": "Xóa",
-  "EDIT": "Chỉnh sửa",
-  "CLONE": "Sao chép",
-  "failed to load": "Không tải được",
-  "Products": "Sản phẩm",
-  "Are you sure, you want to delete?": "Bạn có chắc chắn muốn xóa không?",
-  "Product Deleted Successfully": "Xóa sản phẩm thành công"
+  "DELETE": "Delete",
+  "EDIT": "Edit",
+  "CLONE": "Clone",
+  "failed to load": "Failed to load",
+  "Products": "Products",
+  "Are you sure, you want to delete?": "Are you sure you want to delete?",
+  "Product Deleted Successfully": "Product Deleted Successfully"
 }

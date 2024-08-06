@@ -191,11 +191,11 @@ function ProductDetailsPage({ data, error }) {
       };
       const _r = await postData("/api/question", _data);
       _r.success
-        ? (toast.success("Question Added Successfully"), refreshData())
-        : toast.error("Something Went Wrong 500");
+        ? (toast.success(t("Question Added Successfully")), refreshData())
+        : toast.error(t("Something Went Wrong 500"));
     } catch (err) {
       console.log(err);
-      toast.error(`Something Went Wrong - ${err.message}`);
+      toast.error(`${t("Something Went Wrong")} - ${err.message}`);
     }
   }
 
@@ -341,7 +341,7 @@ function ProductDetailsPage({ data, error }) {
                       ))}
                     </div>
                     <div className={classes.cart_section}>
-                      <p className={classes.section_heading}>QTY</p>
+                      <p className={classes.section_heading}>{t("QTY")}</p>
                       <div className={classes.number_input}>
                         <button
                           onClick={stepDownQty}
@@ -417,7 +417,7 @@ function ProductDetailsPage({ data, error }) {
                   ) : (
                     <EmptyContent
                       icon={<CardText width={40} height={40} />}
-                      text="This product has no description"
+                      text={t("This product has no description")}
                     />
                   )}
                 </>
@@ -429,7 +429,7 @@ function ProductDetailsPage({ data, error }) {
                   ) : (
                     <EmptyContent
                       icon={<StarHalf width={40} height={40} />}
-                      text="This product has no reviews yet"
+                      text={t("This product has no reviews yet")}
                     />
                   )}
                 </>
@@ -442,17 +442,17 @@ function ProductDetailsPage({ data, error }) {
                       onSubmit={postQuestion}
                     >
                       <div className="mb-3">
-                        <label className="form-label">Ask a question</label>
+                        <label className="form-label">{t("Ask a question")}</label>
                         <textarea
                           className="form-control"
                           maxLength={300}
-                          placeholder="Maximum 300 words"
+                          placeholder={t("Maximum 300 words")}
                           ref={question}
                           required
                         ></textarea>
                       </div>
                       <button type="submit" className={classes.c_btn}>
-                        ASK QUESTION
+                        {t("ASK QUESTION")}
                       </button>
                     </form>
                   )}
@@ -466,7 +466,7 @@ function ProductDetailsPage({ data, error }) {
                   ) : (
                     <EmptyContent
                       icon={<ChatLeftDots width={40} height={40} />}
-                      text="There are no questions asked yet. Please login or register to ask question"
+                      text={t("There are no questions asked yet. Please login or register to ask question")}
                     />
                   )}
                 </>

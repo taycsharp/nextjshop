@@ -357,5 +357,22 @@
   "Refund request": "Refund request",
   "Product": "Product",
   "Sales summary of the year": "Sales summary of the year",
-  "Yearly order status summary": "Yearly order status summary"
+  "Yearly order status summary": "Yearly order status summary",
+  "Question Added Successfully": "Question Added Successfully",
+  "Something Went Wrong 500": "Something Went Wrong 500",
+  "Something Went Wrong": "Something Went Wrong",
+  "Ask a question": "Ask a question",
+  "Maximum 300 words": "Maximum 300 words",
+  "ASK QUESTION": "ASK QUESTION",
+  "There are no questions asked yet. Please login or register to ask question": "There are no questions asked yet. Please login or register to ask question",
+  "QTY": "QTY",
+  "This product has no description": "This product has no description",
+  "This product has no reviews yet": "This product has no reviews yet",
+  "DELETE": "Xóa",
+  "EDIT": "Chỉnh sửa",
+  "CLONE": "Sao chép",
+  "failed to load": "Không tải được",
+  "Products": "Sản phẩm",
+  "Are you sure, you want to delete?": "Bạn có chắc chắn muốn xóa không?",
+  "Product Deleted Successfully": "Xóa sản phẩm thành công"
 }

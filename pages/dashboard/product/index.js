@@ -50,12 +50,12 @@ const ProductList = () => {
     await deleteData(`/api/product/delete/${selectedProduct}`)
       .then((data) =>
         data.success
-          ? (toast.success("Product Deleted Successfully"), mutate())
-          : toast.error("Something Went Wrong")
+          ? (toast.success(t("Product Deleted Successfully")), mutate())
+          : toast.error(t("Something Went Wrong"))
       )
       .catch((err) => {
         console.log(err);
-        toast.error("Something Went Wrong");
+        toast.error(t("Something Went Wrong"));
       });
   };
 
@@ -109,7 +109,7 @@ const ProductList = () => {
       selector: (row) => (
         <ImageLoader
           src={row.image[0]?.url}
-          alt={data.name}
+          alt={row.name}
           width={80}
           height={80}
         />
@@ -131,19 +131,19 @@ const ProductList = () => {
         <div>
           {permissions.delete && (
             <div className={classes.button} onClick={() => openModal(row._id)}>
-              <Trash width={22} height={22} title="DELETE" />
+              <Trash width={22} height={22} title={t("DELETE")} />
             </div>
           )}
           {permissions.edit && (
             <Link href={`/dashboard/product/${row.slug}`}>
               <div className={classes.button}>
-                <PencilSquare width={22} height={22} title="EDIT" />
+                <PencilSquare width={22} height={22} title={t("EDIT")} />
               </div>
             </Link>
           )}
           {permissions.edit && (
             <div className={classes.button} onClick={() => cloneDoc(row._id)}>
-              <Files width={22} height={22} title="CLONE" />
+              <Files width={22} height={22} title={t("CLONE")} />
             </div>
           )}
         </div>
@@ -168,12 +168,12 @@ const ProductList = () => {
   return (
     <>
       {error ? (
-        <div className="text-center text-danger">failed to load</div>
+        <div className="text-center text-danger">{t("failed to load")}</div>
       ) : !data ? (
         <Spinner />
       ) : (
         <div>
-          <h4 className="text-center pt-3 pb-5">Products</h4>
+          <h4 className="text-center pt-3 pb-5">{t("Products")}</h4>
           <div className={classes.container}>
             <DataTable
               columns={columns}
@@ -192,19 +192,19 @@ const ProductList = () => {
             >
               <div className={classes.modal_icon}>
                 <Trash width={90} height={90} />
-                <p>Are you sure, you want to delete?</p>
+                <p>{t("Are you sure, you want to delete?")}</p>
                 <div>
                   <button
                     className={classes.danger_button}
                     onClick={() => deleteProduct()}
                   >
-                    Delete
+                    {t("Delete")}
                   </button>
                   <button
                     className={classes.success_button}
                     onClick={() => closeModal()}
                   >
-                    Cancel
+                    {t("Cancel")}
                   </button>
                 </div>
               </div>

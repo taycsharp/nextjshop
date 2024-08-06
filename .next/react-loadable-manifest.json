@@ -11,16 +11,6 @@
       "static/chunks/components_error_403_js.js"
     ]
   },
-  "../components/Auth/signin.js -> next/link": {
-    "id": "../components/Auth/signin.js -> next/link",
-    "files": [
-      "static/chunks/node_modules_next_link_js.js"
-    ]
-  },
-  "../components/Auth/signin.js -> ~/components/Ui/Button": {
-    "id": "../components/Auth/signin.js -> ~/components/Ui/Button",
-    "files": []
-  },
   "../components/Dashboard/monthlySale.js -> react-apexcharts": {
     "id": "../components/Dashboard/monthlySale.js -> react-apexcharts",
     "files": [
@@ -147,16 +137,10 @@
       "static/chunks/components_Layout_Dashboard_layout_js.js"
     ]
   },
-  "../components/Shop/Product/productDetails.js -> react-responsive-carousel": {
-    "id": "../components/Shop/Product/productDetails.js -> react-responsive-carousel",
+  "../components/TextEditor/index.js -> suneditor-react": {
+    "id": "../components/TextEditor/index.js -> suneditor-react",
     "files": [
-      "static/chunks/node_modules_react-responsive-carousel_lib_js_index_js.js"
-    ]
-  },
-  "../components/question/index.js -> ~/components/Ui/Modal/modal": {
-    "id": "../components/question/index.js -> ~/components/Ui/Modal/modal",
-    "files": [
-      "static/chunks/components_Ui_Modal_modal_js-_4a711.js"
+      "static/chunks/node_modules_suneditor-react_dist_index_js.js"
     ]
   },
   "../lib/clientFunctions.js -> axios": {
@@ -175,6 +159,12 @@
     "id": "../utils/useLocalStorage.js -> crypto-js/aes",
     "files": [
       "static/chunks/node_modules_crypto-js_aes_js.js"
+    ]
+  },
+  "404.js -> ~/components/error/404": {
+    "id": "404.js -> ~/components/error/404",
+    "files": [
+      "static/chunks/components_error_404_js.js"
     ]
   },
   "_app.js -> ../public/js/bootstrap.bundle.min.js": {
@@ -217,176 +207,46 @@
       "static/chunks/components_cookieContest_index_js.js"
     ]
   },
-  "checkout/index.js -> ~/components/Checkout/checkoutNav": {
-    "id": "checkout/index.js -> ~/components/Checkout/checkoutNav",
+  "dashboard/product/[slug].js -> ~/components/ProductForm/productEditForm": {
+    "id": "dashboard/product/[slug].js -> ~/components/ProductForm/productEditForm",
     "files": [
-      "static/chunks/components_Checkout_checkoutNav_js-_f1981.js"
+      "static/chunks/components_ProductForm_productEditForm_js.js"
     ]
   },
-  "checkout/index.js -> ~/components/Checkout/paymentGatewayList": {
-    "id": "checkout/index.js -> ~/components/Checkout/paymentGatewayList",
-    "files": [
-      "static/chunks/components_Checkout_paymentGatewayList_js.js"
-    ]
-  },
-  "checkout/index.js -> ~/components/Image": {
-    "id": "checkout/index.js -> ~/components/Image",
-    "files": [
-      "static/chunks/components_Image_index_js.js"
-    ]
-  },
-  "checkout/success/[id].js -> next/link": {
-    "id": "checkout/success/[id].js -> next/link",
+  "dashboard/product/index.js -> next/link": {
+    "id": "dashboard/product/index.js -> next/link",
     "files": [
       "static/chunks/node_modules_next_link_js.js"
     ]
   },
-  "checkout/success/[id].js -> ~/components/Checkout/checkoutNav": {
-    "id": "checkout/success/[id].js -> ~/components/Checkout/checkoutNav",
+  "dashboard/product/index.js -> react-data-table-component": {
+    "id": "dashboard/product/index.js -> react-data-table-component",
     "files": [
-      "static/chunks/components_Checkout_checkoutNav_js-_f1980.js"
+      "static/chunks/node_modules_react-data-table-component_dist_index_cjs_js.js"
     ]
   },
-  "checkout/success/[id].js -> ~/components/Invoice": {
-    "id": "checkout/success/[id].js -> ~/components/Invoice",
-    "files": [
-      "static/chunks/components_Invoice_index_js.js"
-    ]
-  },
-  "checkout/success/[id].js -> ~/components/Invoice/print": {
-    "id": "checkout/success/[id].js -> ~/components/Invoice/print",
-    "files": [
-      "static/chunks/components_Invoice_print_js.js"
-    ]
-  },
-  "checkout/success/[id].js -> ~/components/Ui/Spinner": {
-    "id": "checkout/success/[id].js -> ~/components/Ui/Spinner",
-    "files": [
-      "static/chunks/components_Ui_Spinner_index_js.js"
-    ]
-  },
-  "checkout/success/[id].js -> ~/components/error/404": {
-    "id": "checkout/success/[id].js -> ~/components/error/404",
-    "files": [
-      "static/chunks/components_error_404_js.js"
-    ]
-  },
-  "checkout/success/[id].js -> ~/components/error/500": {
-    "id": "checkout/success/[id].js -> ~/components/error/500",
-    "files": [
-      "static/chunks/components_error_500_js.js"
-    ]
-  },
-  "checkout/success/[id].js -> ~/lib/clientFunctions": {
-    "id": "checkout/success/[id].js -> ~/lib/clientFunctions",
-    "files": []
-  },
-  "index.js -> ~/components/Banner/banner": {
-    "id": "index.js -> ~/components/Banner/banner",
-    "files": [
-      "static/chunks/components_Banner_banner_js.js"
-    ]
-  },
-  "index.js -> ~/components/Brand/brandList": {
-    "id": "index.js -> ~/components/Brand/brandList",
-    "files": [
-      "static/chunks/components_Brand_brandList_js.js"
-    ]
-  },
-  "index.js -> ~/components/Categories/categoriesList": {
-    "id": "index.js -> ~/components/Categories/categoriesList",
-    "files": [
-      "static/chunks/components_Categories_categoriesList_js.js"
-    ]
-  },
-  "index.js -> ~/components/Collection/collection": {
-    "id": "index.js -> ~/components/Collection/collection",
-    "files": [
-      "static/chunks/components_Collection_collection_js.js"
-    ]
-  },
-  "index.js -> ~/components/Header/header": {
-    "id": "index.js -> ~/components/Header/header",
-    "files": [
-      "static/chunks/components_Header_header_js.js"
-    ]
-  },
-  "index.js -> ~/components/ProductListView": {
-    "id": "index.js -> ~/components/ProductListView",
-    "files": [
-      "static/chunks/components_ProductListView_index_js.js"
-    ]
-  },
-  "index.js -> ~/components/Shop/Product/productDetails": {
-    "id": "index.js -> ~/components/Shop/Product/productDetails",
-    "files": [
-      "static/chunks/components_Shop_Product_productDetails_js.js"
-    ]
-  },
-  "index.js -> ~/components/Ui/Modal/modal": {
-    "id": "index.js -> ~/components/Ui/Modal/modal",
-    "files": [
-      "static/chunks/components_Ui_Modal_modal_js-_4a710.js"
-    ]
-  },
-  "index.js -> ~/components/error/500": {
-    "id": "index.js -> ~/components/error/500",
-    "files": [
-      "static/chunks/components_error_500_js.js"
-    ]
-  },
-  "product/[name].js -> react-inner-image-zoom": {
-    "id": "product/[name].js -> react-inner-image-zoom",
-    "files": [
-      "static/chunks/node_modules_react-inner-image-zoom_es_index_js.js"
-    ]
-  },
-  "product/[name].js -> react-responsive-carousel": {
-    "id": "product/[name].js -> react-responsive-carousel",
-    "files": [
-      "static/chunks/node_modules_react-responsive-carousel_lib_js_index_js.js"
-    ]
-  },
-  "product/[name].js -> ~/components/Head": {
-    "id": "product/[name].js -> ~/components/Head",
-    "files": [
-      "static/chunks/components_Head_index_js.js"
-    ]
-  },
-  "product/[name].js -> ~/components/Image": {
-    "id": "product/[name].js -> ~/components/Image",
+  "dashboard/product/index.js -> ~/components/Image": {
+    "id": "dashboard/product/index.js -> ~/components/Image",
     "files": [
       "static/chunks/components_Image_index_js.js"
     ]
   },
-  "product/[name].js -> ~/components/Review": {
-    "id": "product/[name].js -> ~/components/Review",
+  "dashboard/product/index.js -> ~/components/Ui/Modal/modal": {
+    "id": "dashboard/product/index.js -> ~/components/Ui/Modal/modal",
     "files": [
-      "static/chunks/components_Review_index_js.js"
+      "static/chunks/components_Ui_Modal_modal_js.js"
     ]
   },
-  "product/[name].js -> ~/components/Shop/Product/product": {
-    "id": "product/[name].js -> ~/components/Shop/Product/product",
+  "dashboard/product/index.js -> ~/components/Ui/Spinner": {
+    "id": "dashboard/product/index.js -> ~/components/Ui/Spinner",
     "files": [
-      "static/chunks/components_Shop_Product_product_js.js"
+      "static/chunks/components_Ui_Spinner_index_js.js"
     ]
   },
-  "product/[name].js -> ~/components/error/404": {
-    "id": "product/[name].js -> ~/components/error/404",
+  "dashboard/product/index.js -> ~/components/tableFilter": {
+    "id": "dashboard/product/index.js -> ~/components/tableFilter",
     "files": [
-      "static/chunks/components_error_404_js.js"
-    ]
-  },
-  "product/[name].js -> ~/components/error/500": {
-    "id": "product/[name].js -> ~/components/error/500",
-    "files": [
-      "static/chunks/components_error_500_js.js"
-    ]
-  },
-  "product/[name].js -> ~/components/question": {
-    "id": "product/[name].js -> ~/components/question",
-    "files": [
-      "static/chunks/components_question_index_js.js"
+      "static/chunks/components_tableFilter_index_js.js"
     ]
   }
 }

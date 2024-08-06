@@ -12,10 +12,10 @@
   ],
   "rootMainFiles": [],
   "pages": {
-    "/": [
+    "/404": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/index.js"
+      "static/chunks/pages/404.js"
     ],
     "/_app": [
       "static/chunks/webpack.js",
@@ -27,25 +27,20 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/checkout": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/checkout.js"
-    ],
-    "/checkout/success/[id]": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/checkout/success/[id].js"
-    ],
     "/dashboard": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/dashboard.js"
     ],
-    "/product/[name]": [
+    "/dashboard/product": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/product/[name].js"
+      "static/chunks/pages/dashboard/product.js"
+    ],
+    "/dashboard/product/[slug]": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/dashboard/product/[slug].js"
     ]
   },
   "ampFirstPages": []

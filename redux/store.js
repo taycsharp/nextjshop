@@ -23,7 +23,7 @@ const reducer = (state, action) => {
 export const makeStore = () =>
   configureStore({
     reducer,
-    devTools: process.env.NODE_ENV === "development" ? true : false,
+    devTools: process.env.NODE_ENV === "production" ? true : false,
   });
 
 export const wrapper = createWrapper(makeStore);

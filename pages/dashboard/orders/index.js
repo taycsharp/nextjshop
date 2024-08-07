@@ -13,6 +13,7 @@ import {
   fetchData,
   updateData,
 } from "~/lib/clientFunctions";
+import usePaginationOptions from "~/components/Table/paginationOptions";
 
 const DataTable = dynamic(() => import("react-data-table-component"));
 const FilterComponent = dynamic(() => import("~/components/tableFilter"));
@@ -150,7 +151,7 @@ const OrderPage = () => {
         <>
           {row.orderId}
           {row.new && (
-            <span className="badge rounded-pill bg-primary ms-1">NEW</span>
+            <span className="badge rounded-pill bg-primary ms-1">{t("NEW")}</span>
           )}
         </>
       ),
@@ -179,8 +180,8 @@ const OrderPage = () => {
               disabled={row.paymentStatus === "Paid" ? true : false}
               className="form-select form-select-sm"
             >
-              <option value="Paid">Paid</option>
-              <option value="Unpaid">Unpaid</option>
+              <option value="Paid">{t("Paid")}</option>
+              <option value="Unpaid">{t("Unpaid")}</option>
             </select>
           </div>
         ) : (
@@ -199,14 +200,14 @@ const OrderPage = () => {
               // disabled={row.status === "Delivered" ? true : false}
               className="form-select form-select-sm"
             >
-              <option value="Pending">Pending</option>
-              <option value="In Progress">In Progress</option>
-              <option value="Packaged">Packaged</option>
-              <option value="Shipped">Shipped</option>
-              <option value="Delivered">Delivered</option>
-              <option value="Canceled">Canceled</option>
+              <option value="Pending">{t("Pending")}</option>
+              <option value="In Progress">{t("In Progress")}</option>
+              <option value="Packaged">{t("Packaged")}</option>
+              <option value="Shipped">{t("Shipped")}</option>
+              <option value="Delivered">{t("Delivered")}</option>
+              <option value="Canceled">{t("Canceled")}</option>
               <option value="Draft" disabled hidden>
-                Failed
+                {t("Failed")}
               </option>
             </select>
           </div>
@@ -221,13 +222,13 @@ const OrderPage = () => {
         <div>
           {permissions.delete && (
             <div className={classes.button} onClick={() => openModal(row._id)}>
-              <Trash width={22} height={22} title="DELETE" />
+              <Trash width={22} height={22} title={t("DELETE")} />
             </div>
           )}
           {permissions.view && (
             <Link href={`/dashboard/orders/${row._id}`}>
               <div className={classes.button}>
-                <Eye width={22} height={22} title="VIEW" />
+                <Eye width={22} height={22} title={t("VIEW")} />
               </div>
             </Link>
           )}
@@ -255,6 +256,8 @@ const OrderPage = () => {
     setCurrentPage(page);
   };
 
+  const paginationOptions = usePaginationOptions();
+
   return (
     <div>
       <h4 className="text-center pt-3 pb-5">{t("orders")}</h4>
@@ -273,23 +276,24 @@ const OrderPage = () => {
           onChangePage={handlePageChange}
           progressPending={loading}
           paginationRowsPerPageOptions={[10]}
+          paginationComponentOptions={paginationOptions}
         />
         <GlobalModal isOpen={isOpen} handleCloseModal={closeModal} small={true}>
           <div className={classes.modal_icon}>
             <Trash width={90} height={90} />
-            <p>Are you sure, you want to delete?</p>
+            <p>{t("Are you sure, you want to delete?")}</p>
             <div>
               <button
                 className={classes.danger_button}
                 onClick={() => deleteOrder()}
               >
-                Delete
+                {t("Delete")}
               </button>
               <button
                 className={classes.success_button}
                 onClick={() => closeModal()}
               >
-                Cancel
+                {t("Cancel")}
               </button>
             </div>
           </div>

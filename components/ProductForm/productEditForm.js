@@ -130,7 +130,7 @@ const ProductEditForm = (props) => {
     }
   }, [selectedColor, attrItemList, variantInputList.length]);
 
-  if (error) return <div>failed to load</div>;
+  if (error) return <div>{t("failed to load")}</div>;
   if (!data) return <Spinner />;
   if (!data.product) return <DefaultErrorPage statusCode={404} />;
 
@@ -237,12 +237,12 @@ const ProductEditForm = (props) => {
     await postData("/api/product/edit", formData)
       .then((status) =>
         status.success
-          ? toast.success("Product Updated Successfully")
-          : toast.error("Something Went Wrong")
+          ? toast.success(t("Product Updated Successfully"))
+          : toast.error(t("Something Went Wrong"))
       )
       .catch((err) => {
         console.log(err);
-        toast.error(`Something Went Wrong ${err.message}`);
+        toast.error(`${t("Something Went Wrong")} ${err.message}`);
       });
     setButtonState("");
   };
@@ -305,7 +305,7 @@ const ProductEditForm = (props) => {
             />
           </div>
           <div className="py-3">
-            <label className="form-label">{t("description")}</label>
+            <label className="form-label">{t("Description")}</label>
             <TextEditor
               previousValue={editorState}
               updatedValue={updatedValueCb}
@@ -346,7 +346,7 @@ const ProductEditForm = (props) => {
                 </div>
                 <div className="col-12">
                   <div className="py-3">
-                    <label className="form-label">{t("sku")}*</label>
+                    <label className="form-label">{t("SKU")}*</label>
                     <input
                       type="text"
                       className={classes.input + " form-control"}
@@ -374,7 +374,7 @@ const ProductEditForm = (props) => {
                     setSelectedColor(e);
                   }}
                   value={selectedColor}
-                  labelledBy="Select Color"
+                  labelledBy={t("Select Color")}
                 />
               </div>
               <div className="py-3">
@@ -407,7 +407,7 @@ const ProductEditForm = (props) => {
                       setAttrItemList(e);
                     }}
                     value={attrItemList}
-                    labelledBy="Select Item"
+                    labelledBy={t("Select Item")}
                   />
                 </div>
               )}
@@ -446,7 +446,7 @@ const ProductEditForm = (props) => {
                         </div>
                         <div className="col-12 col-md-3">
                           <div className="py-3">
-                            <label className="form-label">{t("sku")}*</label>
+                            <label className="form-label">{t("SKU")}*</label>
                             <input
                               type="text"
                               className={classes.input + " form-control"}
@@ -473,7 +473,7 @@ const ProductEditForm = (props) => {
                               onWheel={(e) => e.target.blur()}
                             />
                             <div className="small text-primary">
-                              S{t("et -1 to make it unlimited")}
+                              {t("Set -1 to make it unlimited")}
                             </div>
                           </div>
                         </div>
@@ -509,7 +509,7 @@ const ProductEditForm = (props) => {
             <div className="col-md-4">
               <div className="py-3">
                 <label htmlFor="inp-110" className="form-label">
-                  {t("new_product")}
+                  {t("New Product")}
                 </label>
                 <div className="form-check form-switch">
                   <input
@@ -520,7 +520,7 @@ const ProductEditForm = (props) => {
                     defaultChecked={data.product.new}
                   />
                   <label className="form-check-label" htmlFor="inp-110">
-                    {t("status")}
+                    {t("Status")}
                   </label>
                 </div>
               </div>
@@ -528,7 +528,7 @@ const ProductEditForm = (props) => {
             <div className="col-md-4">
               <div className="py-3">
                 <label htmlFor="inp-11" className="form-label">
-                  {t("trending_product")}
+                  {t("Trending Product")}
                 </label>
                 <div className="form-check form-switch">
                   <input
@@ -539,7 +539,7 @@ const ProductEditForm = (props) => {
                     defaultChecked={data.product.trending}
                   />
                   <label className="form-check-label" htmlFor="inp-11">
-                    {t("status")}
+                    {t("Status")}
                   </label>
                 </div>
               </div>
@@ -547,7 +547,7 @@ const ProductEditForm = (props) => {
             <div className="col-md-4">
               <div className="py-3">
                 <label htmlFor="inp-111" className="form-label">
-                  {t("best_selling_product")}
+                  {t("Best Selling Product")}
                 </label>
                 <div className="form-check form-switch">
                   <input
@@ -558,7 +558,7 @@ const ProductEditForm = (props) => {
                     defaultChecked={data.product.bestSelling}
                   />
                   <label className="form-check-label" htmlFor="inp-111">
-                    {t("status")}
+                    {t("Status")}
                   </label>
                 </div>
               </div>
@@ -580,8 +580,8 @@ const ProductEditForm = (props) => {
                 <option value="" disabled>
                   {t("Select Product Type")}
                 </option>
-                <option value="simple">Simple Product</option>
-                <option value="variable">Variable Product</option>
+                <option value="simple">{t("Simple Product")}</option>
+                <option value="variable">{t("Variable Product")}</option>
               </select>
             </div>
           </div>
@@ -600,7 +600,7 @@ const ProductEditForm = (props) => {
           <div className="col-12">
             <div className="py-3">
               <label htmlFor="inp-4" className="form-label">
-                {t("price")}*
+                {t("Price")}*
               </label>
               <input
                 type="number"
@@ -651,13 +651,13 @@ const ProductEditForm = (props) => {
     return (
       <div className="card mb-5 border-0 shadow">
         <div className="card-header bg-white py-3 fw-bold text-center">
-          {t("Vat & Tax Information")}
+          {t("VAT & Tax Information")}
         </div>
         <div className="card-body">
           <div className="col-12">
             <div className="py-3">
               <label htmlFor="inp-4" className="form-label">
-                {t("Vat in Percentage")}*
+                {t("VAT in Percentage")}*
               </label>
               <input
                 type="number"
@@ -708,7 +708,7 @@ const ProductEditForm = (props) => {
         <div className="card-body">
           <div className="col-12">
             <div className="py-3">
-              <label className="form-label">{t("categories")}*</label>
+              <label className="form-label">{t("Categories")}*</label>
               <select
                 className="form-select"
                 onChange={updateCategory}
@@ -716,7 +716,7 @@ const ProductEditForm = (props) => {
                 key={data.product.categories[0]}
                 required
               >
-                <option value="">Select Category</option>
+                <option value="">{t("Select Category")}</option>
                 {data?.category?.map((x, i) => (
                   <option key={i} value={x.slug}>
                     {x.name}
@@ -734,7 +734,7 @@ const ProductEditForm = (props) => {
                 value={selectedSubCategory}
                 required
               >
-                <option value="">Select Sub Category</option>
+                <option value="">{t("Select Subcategory")}</option>
                 {subcategoryOption.map((x, i) => (
                   <option key={i} value={x.slug}>
                     {x.name}
@@ -751,7 +751,7 @@ const ProductEditForm = (props) => {
                 onChange={(e) => setSelectedChildcategory(e.target.value)}
                 value={selectedChildcategory}
               >
-                <option value="">Select Child Category</option>
+                <option value="">{t("Select Child Category")}</option>
                 {childCategoryOption.map((x, i) => (
                   <option key={i} value={x.slug}>
                     {x.name}
@@ -768,7 +768,7 @@ const ProductEditForm = (props) => {
               defaultValue={data.product.brand}
               key={data.product.brand}
             >
-              <option value="">None</option>
+              <option value="">{t("None")}</option>
               {data.brand &&
                 data.brand.map((x) => (
                   <option value={x.slug} key={x._id}>
@@ -791,7 +791,7 @@ const ProductEditForm = (props) => {
         <div className="card-body">
           <div className="py-3">
             <label htmlFor="inp-1" className="form-label">
-              {t("name")}*
+              {t("Name")}*
             </label>
             <input
               type="text"

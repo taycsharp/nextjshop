@@ -1,8 +1,10 @@
 import classes from "./table.module.css";
 import { useEffect, useState } from "react";
 import { Search } from "@styled-icons/bootstrap";
+import { useTranslation } from "react-i18next";
 
 const FilterComponent = ({ filterText, onFilter, onClear, placeholder }) => {
+  const { t } = useTranslation();
   const [data, setData] = useState("");
 
   function search() {
@@ -21,12 +23,13 @@ const FilterComponent = ({ filterText, onFilter, onClear, placeholder }) => {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [data]);
+
   return (
     <div className="d-flex">
       <input
         id="search"
         type="text"
-        placeholder={`Filter By ${placeholder ? placeholder : "Name"}`}
+        placeholder={t(`Filter By ${placeholder ? placeholder : "Name"}`)}
         aria-label="Search Input"
         className={classes.search_bar}
         value={data}
@@ -56,4 +59,5 @@ const FilterComponent = ({ filterText, onFilter, onClear, placeholder }) => {
     </div>
   );
 };
+
 export default FilterComponent;

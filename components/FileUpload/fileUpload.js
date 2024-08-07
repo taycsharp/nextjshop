@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { toast } from "react-toastify";
 import ImageLoader from "../Image";
 import classes from "./fileUpload.module.css";
+import { useTranslation } from "react-i18next";
 
 const FileUpload = ({
   label,
@@ -13,6 +14,7 @@ const FileUpload = ({
   resetCb,
   ...otherProps
 }) => {
+  const { t } = useTranslation();
   const fileInputField = useRef(null);
   const [files, setFiles] = useState(preSelectedFiles || []);
   const [status, setStatus] = useState("");
@@ -29,7 +31,7 @@ const FileUpload = ({
 
   const addNewFilesLocal = async (file) => {
     try {
-      setStatus("Uploading...");
+      setStatus(t("Uploading..."));
       const data = new FormData();
       data.append("file", file);
       const resp = await axios({
@@ -47,7 +49,7 @@ const FileUpload = ({
           url: resp.url,
         };
       } else {
-        throw new Error("Something Went Wrong " + resp.err);
+        throw new Error(`${t("Something Went Wrong")}: ${resp.err}`);
       }
     } catch (err) {
       setStatus(err.message);
@@ -56,7 +58,7 @@ const FileUpload = ({
 
   const addNewFilesS3 = async (file) => {
     try {
-      setStatus("Uploading...");
+      setStatus(t("Uploading..."));
       // get secure url from server
       const { name, url } = await axios({
         method: "post",
@@ -111,14 +113,14 @@ const FileUpload = ({
           }
         }
       } else {
-        toast.warning("File size is too large (Max 2mb)");
+        toast.warning(t("File size is too large (Max 2mb)"));
       }
     }
   };
 
   const removeFile = async (fileName) => {
     try {
-      setStatus("Deleting...");
+      setStatus(t("Deleting..."));
       const { success, err } = await axios({
         method: "DELETE",
         url: `/api/fileupload/${
@@ -134,7 +136,7 @@ const FileUpload = ({
       }
     } catch (err) {
       console.log(err);
-      toast.error(`Something Went Wrong - ${err.message}`);
+      toast.error(`${t("Something Went Wrong")} - ${err.message}`);
     }
     setStatus("");
   };
@@ -143,9 +145,7 @@ const FileUpload = ({
     <>
       <div className={classes.fileUploadContainer}>
         <label className={classes.inputLabel}>{label}</label>
-        <p className={classes.dragDropText}>
-          Drag and drop your files anywhere or
-        </p>
+        <p className={classes.dragDropText}>{t("Drag and drop your files anywhere or")}</p>
         <button
           className={classes.uploadFileBtn}
           type="button"
@@ -154,7 +154,7 @@ const FileUpload = ({
           <div>
             <Upload width={22} height={22} />
           </div>
-          <span> Upload {otherProps.multiple ? "files" : "a file"}</span>
+          <span>{t("Upload")} {otherProps.multiple ? t("files") : t("a file")}</span>
         </button>
         <input
           className={classes.formField}
@@ -168,7 +168,7 @@ const FileUpload = ({
       </div>
       {status.length > 0 && <div className="text-danger my-2">{status}</div>}
       <div className={classes.filePreviewContainer}>
-        <span>To Upload</span>
+        <span>{t("To Upload")}</span>
         <div className={classes.previewList}>
           {files.map((file, index) => {
             return (

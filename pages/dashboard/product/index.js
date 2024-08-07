@@ -7,6 +7,7 @@ import { toast } from "react-toastify";
 import useSWR from "swr";
 import classes from "~/components/tableFilter/table.module.css";
 import { cpf, deleteData, fetchData, updateData } from "~/lib/clientFunctions";
+import usePaginationOptions from "~/components/Table/paginationOptions";
 
 const DataTable = dynamic(() => import("react-data-table-component"));
 const FilterComponent = dynamic(() => import("~/components/tableFilter"));
@@ -165,6 +166,8 @@ const ProductList = () => {
     },
   };
 
+  const paginationComponentOptions = usePaginationOptions();
+
   return (
     <>
       {error ? (
@@ -184,6 +187,7 @@ const ProductList = () => {
               subHeaderComponent={subHeaderComponentMemo}
               persistTableHead
               customStyles={customStyles}
+              paginationComponentOptions={paginationComponentOptions}
             />
             <GlobalModal
               isOpen={isOpen}

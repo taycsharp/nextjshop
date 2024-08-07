@@ -201,62 +201,26 @@
       "static/chunks/components_cookieContest_index_js.js"
     ]
   },
-  "dashboard/orders/index.js -> next/link": {
-    "id": "dashboard/orders/index.js -> next/link",
-    "files": [
-      "static/chunks/node_modules_next_link_js.js"
-    ]
-  },
-  "dashboard/orders/index.js -> react-data-table-component": {
-    "id": "dashboard/orders/index.js -> react-data-table-component",
+  "dashboard/categories/index.js -> react-data-table-component": {
+    "id": "dashboard/categories/index.js -> react-data-table-component",
     "files": [
       "static/chunks/node_modules_react-data-table-component_dist_index_cjs_js.js"
     ]
   },
-  "dashboard/orders/index.js -> ~/components/Ui/Modal/modal": {
-    "id": "dashboard/orders/index.js -> ~/components/Ui/Modal/modal",
+  "dashboard/categories/index.js -> ~/components/Ui/Modal/modal": {
+    "id": "dashboard/categories/index.js -> ~/components/Ui/Modal/modal",
     "files": [
       "static/chunks/components_Ui_Modal_modal_js-_4a711.js"
     ]
   },
-  "dashboard/orders/index.js -> ~/components/tableFilter": {
-    "id": "dashboard/orders/index.js -> ~/components/tableFilter",
-    "files": [
-      "static/chunks/components_tableFilter_index_js.js"
-    ]
-  },
-  "dashboard/product/index.js -> next/link": {
-    "id": "dashboard/product/index.js -> next/link",
-    "files": [
-      "static/chunks/node_modules_next_link_js.js"
-    ]
-  },
-  "dashboard/product/index.js -> react-data-table-component": {
-    "id": "dashboard/product/index.js -> react-data-table-component",
-    "files": [
-      "static/chunks/node_modules_react-data-table-component_dist_index_cjs_js.js"
-    ]
-  },
-  "dashboard/product/index.js -> ~/components/Image": {
-    "id": "dashboard/product/index.js -> ~/components/Image",
-    "files": [
-      "static/chunks/components_Image_index_js.js"
-    ]
-  },
-  "dashboard/product/index.js -> ~/components/Ui/Modal/modal": {
-    "id": "dashboard/product/index.js -> ~/components/Ui/Modal/modal",
-    "files": [
-      "static/chunks/components_Ui_Modal_modal_js-_4a711.js"
-    ]
-  },
-  "dashboard/product/index.js -> ~/components/Ui/Spinner": {
-    "id": "dashboard/product/index.js -> ~/components/Ui/Spinner",
+  "dashboard/categories/index.js -> ~/components/Ui/Spinner": {
+    "id": "dashboard/categories/index.js -> ~/components/Ui/Spinner",
     "files": [
       "static/chunks/components_Ui_Spinner_index_js.js"
     ]
   },
-  "dashboard/product/index.js -> ~/components/tableFilter": {
-    "id": "dashboard/product/index.js -> ~/components/tableFilter",
+  "dashboard/categories/index.js -> ~/components/tableFilter": {
+    "id": "dashboard/categories/index.js -> ~/components/tableFilter",
     "files": [
       "static/chunks/components_tableFilter_index_js.js"
     ]

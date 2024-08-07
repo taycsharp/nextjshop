@@ -32,15 +32,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/dashboard.js"
     ],
-    "/dashboard/orders": [
+    "/dashboard/categories": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/dashboard/orders.js"
-    ],
-    "/dashboard/product": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/dashboard/product.js"
+      "static/chunks/pages/dashboard/categories.js"
     ]
   },
   "ampFirstPages": []

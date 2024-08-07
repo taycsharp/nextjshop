@@ -10,6 +10,17 @@ const OrderStatusChart = ({ statusData }) => {
   const [data, setData] = useState([]);
   const [chartData, setChartData] = useState(null);
   const { t } = useTranslation();
+
+  useEffect(() => {
+    if (statusData?.orderCounts) {
+      const __d = Object.entries(statusData.orderCounts).map(([key, value]) => [
+        t(key),
+        value,
+      ]);
+      setData(__d);
+    }
+  }, [statusData, t]);
+
   useEffect(() => {
     setChartData({
       options: {
@@ -18,13 +29,6 @@ const OrderStatusChart = ({ statusData }) => {
       series: data.map((status) => status[1]),
     });
   }, [data]);
-
-  useEffect(() => {
-    if (statusData?.orderCounts) {
-      const __d = Object.entries(statusData?.orderCounts).map((x) => x);
-      setData(__d);
-    }
-  }, [statusData]);
 
   return (
     <Card title={t("Yearly order status summary")}>

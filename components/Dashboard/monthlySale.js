@@ -17,44 +17,6 @@ const SalesAreaChart = ({ yearlySalesData }) => {
   } = useSelector((state) => state.settings);
   const [chartData, setChartData] = useState(null);
   const { t } = useTranslation();
-  useEffect(() => {
-    setChartData({
-      options: {
-        chart: {
-          id: "area-chart",
-        },
-        xaxis: {
-          categories: [
-            "Jan",
-            "Feb",
-            "Mar",
-            "Apr",
-            "May",
-            "Jun",
-            "Jul",
-            "Aug",
-            "Sep",
-            "Oct",
-            "Nov",
-            "Dec",
-          ],
-        },
-        dataLabels: {
-          formatter: function (value) {
-            return symbol + value.toFixed(2);
-          },
-        },
-        colors: [primary],
-      },
-      series: [
-        {
-          name: "Sales",
-          data: data.map((entry) => entry.total),
-        },
-      ],
-    });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [data]);
 
   useEffect(() => {
     if (yearlySalesData && yearlySalesData.length > 0) {
@@ -75,6 +37,44 @@ const SalesAreaChart = ({ yearlySalesData }) => {
       setData(ORData);
     }
   }, [yearlySalesData]);
+
+  useEffect(() => {
+    setChartData({
+      options: {
+        chart: {
+          id: "area-chart",
+        },
+        xaxis: {
+          categories: [
+            t("Jan"),
+            t("Feb"),
+            t("Mar"),
+            t("Apr"),
+            t("May"),
+            t("Jun"),
+            t("Jul"),
+            t("Aug"),
+            t("Sep"),
+            t("Oct"),
+            t("Nov"),
+            t("Dec"),
+          ],
+        },
+        dataLabels: {
+          formatter: function (value) {
+            return symbol + value.toFixed(2);
+          },
+        },
+        colors: [primary],
+      },
+      series: [
+        {
+          name: t("Sales"),
+          data: data.map((entry) => entry.total),
+        },
+      ],
+    });
+  }, [data, t, symbol, primary]);
 
   return (
     <Card

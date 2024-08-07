@@ -2,14 +2,11 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
+  "/dashboard/categories": "pages/dashboard/categories.js",
   "/dashboard": "pages/dashboard.js",
   "/api/auth/[...nextauth]": "pages/api/auth/[...nextauth].js",
   "/": "pages/index.js",
-  "/api/notification": "pages/api/notification.js",
-  "/api/home/settings": "pages/api/home/settings.js",
   "/api/home/wishlist": "pages/api/home/wishlist.js",
-  "/dashboard/categories": "pages/dashboard/categories.js",
-  "/api/home/categories": "pages/api/home/categories.js",
   "/api/dashboard": "pages/api/dashboard.js",
-  "/api/categories": "pages/api/categories.js"
+  "/api/notification": "pages/api/notification.js"
 }

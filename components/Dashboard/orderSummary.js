@@ -20,7 +20,7 @@ export default function OrderSummary({ data }) {
   }
 
   const chData = {
-    series: [{ name: "Order", data: ORData }],
+    series: [{ name: t("Order"), data: ORData }],
     options: {
       chart: {
         height: 350,
@@ -40,18 +40,18 @@ export default function OrderSummary({ data }) {
       },
       xaxis: {
         categories: [
-          "Jan",
-          "Feb",
-          "Mar",
-          "Apr",
-          "May",
-          "Jun",
-          "Jul",
-          "Aug",
-          "Sep",
-          "Oct",
-          "Nov",
-          "Dec",
+          t("Jan"),
+          t("Feb"),
+          t("Mar"),
+          t("Apr"),
+          t("May"),
+          t("Jun"),
+          t("Jul"),
+          t("Aug"),
+          t("Sep"),
+          t("Oct"),
+          t("Nov"),
+          t("Dec"),
         ],
       },
       yaxis: {

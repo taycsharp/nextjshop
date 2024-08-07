@@ -14,6 +14,7 @@ import useSWR from "swr";
 import ImageLoader from "~/components/Image";
 import classes from "~/components/tableFilter/table.module.css";
 import { cpf, deleteData, fetchData, updateData } from "~/lib/clientFunctions";
+import usePaginationOptions from "~/components/Table/paginationOptions";
 
 const DataTable = dynamic(() => import("react-data-table-component"));
 const FilterComponent = dynamic(() => import("~/components/tableFilter"));
@@ -113,6 +114,8 @@ const CategoryTable = () => {
     },
   };
 
+  const paginationOptions = usePaginationOptions();
+
   const columns = [
     {
       name: t("id"),
@@ -193,6 +196,7 @@ const CategoryTable = () => {
             subHeaderComponent={subHeaderComponentMemo}
             persistTableHead
             customStyles={customStyles}
+            paginationRowsPerPageOptions={paginationOptions}
           />
         </div>
       )}

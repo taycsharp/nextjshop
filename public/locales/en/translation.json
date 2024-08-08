@@ -429,5 +429,7 @@
   "Shipped": "Shipped",
   "Delivered": "Delivered",
   "Canceled": "Canceled",
-  "Draft": "Failed"
+  "Draft": "Failed",
+  "Sales": "Sales",
+  "Order": "Order"
 }

@@ -423,12 +423,14 @@
     "Oct": "Tháng 10",
     "Nov": "Tháng 11",
     "Dec": "Tháng 12",
-    "Pending": "Đang chờ xử lý",
-    "In Progress": "Đang tiến hành",
+    "Pending": "Chờ xử lý",
+    "In Progress": "Đang xử lý",
     "Packaged": "Đã đóng gói",
     "Shipped": "Đã giao",
-    "Delivered": "Đã giao hàng",
+    "Delivered": "Đã giao",
     "Canceled": "Đã hủy",
-    "Draft": "Thất bại"
+    "Draft": "Thất bại",
+    "Sales": "Bán",
+    "Order": "Đơn Hàng"
   }
   

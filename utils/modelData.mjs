@@ -166,6 +166,7 @@ export const product = {
   unit: String,
   unitValue: String,
   price: Number,
+  costPrice: Number,
   discount: Number,
   description: String,
   shortDescription: String,

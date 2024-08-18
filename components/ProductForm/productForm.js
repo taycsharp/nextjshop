@@ -339,6 +339,22 @@ const ProductForm = () => {
           </div>
           <div className="col-12">
             <div className="py-3">
+              <label htmlFor="inp-4" className="form-label">
+                {t("cost price")}*
+              </label>
+              <input
+                type="number"
+                step="0.01"
+                id="inp-4"
+                className="form-control"
+                name="cost_price"
+                required
+                onWheel={(e) => e.target.blur()}
+              />
+            </div>
+          </div>
+          <div className="col-12">
+            <div className="py-3">
               <label htmlFor="inp-5" className="form-label">
                 {t("Discount in Percentage")}*
               </label>

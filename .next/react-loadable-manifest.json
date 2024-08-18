@@ -11,18 +11,6 @@
       "static/chunks/components_error_403_js.js"
     ]
   },
-  "../components/Auth/signin.js -> next/link": {
-    "id": "../components/Auth/signin.js -> next/link",
-    "files": [
-      "static/chunks/node_modules_next_link_js.js"
-    ]
-  },
-  "../components/Auth/signin.js -> ~/components/Ui/Button": {
-    "id": "../components/Auth/signin.js -> ~/components/Ui/Button",
-    "files": [
-      "static/chunks/components_Ui_Button_index_js.js"
-    ]
-  },
   "../components/Dashboard/monthlySale.js -> react-apexcharts": {
     "id": "../components/Dashboard/monthlySale.js -> react-apexcharts",
     "files": [
@@ -149,12 +137,6 @@
       "static/chunks/components_Layout_Dashboard_layout_js.js"
     ]
   },
-  "../components/Shop/Product/productDetails.js -> react-responsive-carousel": {
-    "id": "../components/Shop/Product/productDetails.js -> react-responsive-carousel",
-    "files": [
-      "static/chunks/node_modules_react-responsive-carousel_lib_js_index_js.js"
-    ]
-  },
   "../lib/clientFunctions.js -> axios": {
     "id": "../lib/clientFunctions.js -> axios",
     "files": [
@@ -171,12 +153,6 @@
     "id": "../utils/useLocalStorage.js -> crypto-js/aes",
     "files": [
       "static/chunks/node_modules_crypto-js_aes_js.js"
-    ]
-  },
-  "404.js -> ~/components/error/404": {
-    "id": "404.js -> ~/components/error/404",
-    "files": [
-      "static/chunks/components_error_404_js.js"
     ]
   },
   "_app.js -> ../public/js/bootstrap.bundle.min.js": {
@@ -219,64 +195,40 @@
       "static/chunks/components_cookieContest_index_js.js"
     ]
   },
-  "index.js -> ~/components/Banner/banner": {
-    "id": "index.js -> ~/components/Banner/banner",
+  "dashboard/product/index.js -> next/link": {
+    "id": "dashboard/product/index.js -> next/link",
     "files": [
-      "static/chunks/components_Banner_banner_js.js"
+      "static/chunks/node_modules_next_link_js.js"
     ]
   },
-  "index.js -> ~/components/Brand/brandList": {
-    "id": "index.js -> ~/components/Brand/brandList",
+  "dashboard/product/index.js -> react-data-table-component": {
+    "id": "dashboard/product/index.js -> react-data-table-component",
     "files": [
-      "static/chunks/components_Brand_brandList_js.js"
+      "static/chunks/node_modules_react-data-table-component_dist_index_cjs_js.js"
     ]
   },
-  "index.js -> ~/components/Categories/categoriesList": {
-    "id": "index.js -> ~/components/Categories/categoriesList",
+  "dashboard/product/index.js -> ~/components/Image": {
+    "id": "dashboard/product/index.js -> ~/components/Image",
     "files": [
-      "static/chunks/components_Categories_categoriesList_js.js"
+      "static/chunks/components_Image_index_js.js"
     ]
   },
-  "index.js -> ~/components/Collection/collection": {
-    "id": "index.js -> ~/components/Collection/collection",
-    "files": [
-      "static/chunks/components_Collection_collection_js.js"
-    ]
-  },
-  "index.js -> ~/components/Header/header": {
-    "id": "index.js -> ~/components/Header/header",
-    "files": [
-      "static/chunks/components_Header_header_js.js"
-    ]
-  },
-  "index.js -> ~/components/ProductListView": {
-    "id": "index.js -> ~/components/ProductListView",
-    "files": [
-      "static/chunks/components_ProductListView_index_js.js"
-    ]
-  },
-  "index.js -> ~/components/Shop/Product/productDetails": {
-    "id": "index.js -> ~/components/Shop/Product/productDetails",
-    "files": [
-      "static/chunks/components_Shop_Product_productDetails_js.js"
-    ]
-  },
-  "index.js -> ~/components/Ui/Modal/modal": {
-    "id": "index.js -> ~/components/Ui/Modal/modal",
+  "dashboard/product/index.js -> ~/components/Ui/Modal/modal": {
+    "id": "dashboard/product/index.js -> ~/components/Ui/Modal/modal",
     "files": [
       "static/chunks/components_Ui_Modal_modal_js.js"
     ]
   },
-  "index.js -> ~/components/error/500": {
-    "id": "index.js -> ~/components/error/500",
+  "dashboard/product/index.js -> ~/components/Ui/Spinner": {
+    "id": "dashboard/product/index.js -> ~/components/Ui/Spinner",
     "files": [
-      "static/chunks/components_error_500_js.js"
+      "static/chunks/components_Ui_Spinner_index_js.js"
     ]
   },
-  "signin.js -> ~/components/Auth/signin": {
-    "id": "signin.js -> ~/components/Auth/signin",
+  "dashboard/product/index.js -> ~/components/tableFilter": {
+    "id": "dashboard/product/index.js -> ~/components/tableFilter",
     "files": [
-      "static/chunks/components_Auth_signin_js.js"
+      "static/chunks/components_tableFilter_index_js.js"
     ]
   }
 }

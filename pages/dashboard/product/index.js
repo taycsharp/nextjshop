@@ -127,6 +127,11 @@ const ProductList = () => {
       sortable: true,
     },
     {
+      name: t("cost price"),
+      selector: (row) => currencySymbol + row.costPrice,
+      sortable: true,
+    },
+    {
       name: t("action"),
       selector: (row) => (
         <div>
@@ -176,7 +181,7 @@ const ProductList = () => {
         <Spinner />
       ) : (
         <div>
-          <h4 className="text-center pt-3 pb-5">{t("Products")}</h4>
+          <h4 className="text-center pt-3 pb-6">{t("Products")}</h4>
           <div className={classes.container}>
             <DataTable
               columns={columns}

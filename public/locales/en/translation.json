@@ -431,5 +431,6 @@
   "Canceled": "Canceled",
   "Draft": "Failed",
   "Sales": "Sales",
-  "Order": "Order"
+  "Order": "Order",
+  "cost price": "Cost price"
 }

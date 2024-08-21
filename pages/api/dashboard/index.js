@@ -4,6 +4,7 @@ import categoryModel from "~/models/category";
 import colorModel from "~/models/colors";
 import couponModel from "~/models/coupon";
 import orderModel from "~/models/order";
+import productModel from "~/models/product";
 import userModel from "~/models/user";
 import dbConnect from "~/utils/dbConnect";
 
@@ -43,6 +44,33 @@ export default async function apiHandler(req, res) {
             },
           },
         ]);
+
+        const monthlyData = Array(12).fill().map(() => ({ sales: 0, profit: 0 }));
+        const orders = await orderModel.find({
+          orderDate: {
+            $gte: date,
+            $lt: new Date(`${year + 1}-01-01`),
+          },
+        });
+
+        // Calculate sales and profit for each month
+        for (let ord of orders) {
+          for (let product of ord.products) {
+            // Fetch product details
+            const productDetails = await productModel.findById(product._id).select("price costPrice");
+
+            if (productDetails) {
+              const costPrice = productDetails.costPrice || 0;
+              const salesAmount = product.price * product.qty;
+              const profit = (product.price - costPrice) * product.qty;
+
+              const monthIndex = ord.orderDate.getMonth(); // months are 0-indexed
+
+              monthlyData[monthIndex].sales += salesAmount;
+              monthlyData[monthIndex].profit += profit;
+            }
+          }
+        }
 
         const salesByMonth = await orderModel.aggregate([
           {
@@ -127,6 +155,7 @@ export default async function apiHandler(req, res) {
         res.status(200).json({
           success: true,
           order,
+          monthlyData,
           salesByMonth,
           totalOrder,
           totalUser,

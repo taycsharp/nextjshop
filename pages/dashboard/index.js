@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import SalesAreaChart from "~/components/Dashboard/monthlySale";
 import OrderStatusChart from "~/components/Dashboard/orderStatus";
 import OrderSummary from "~/components/Dashboard/orderSummary";
+import ProfitSales from "~/components/Dashboard/profitSales";
 import PageLoader from "~/components/Ui/pageLoader";
 import classes from "~/styles/dashboard.module.css";
 
@@ -78,6 +79,9 @@ const Dashboard = () => {
           </div>
           <div className="col-md-12">
             <SalesAreaChart yearlySalesData={data.salesByMonth || []} />
+          </div>
+          <div className="col-md-12">
+            <ProfitSales data={data.monthlyData|| []} />
           </div>
         </div>
       </div>

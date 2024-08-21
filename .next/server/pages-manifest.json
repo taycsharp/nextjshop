@@ -2,12 +2,14 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/dashboard/product": "pages/dashboard/product.js",
   "/dashboard": "pages/dashboard.js",
-  "/signin": "pages/signin.js",
-  "/api/notification": "pages/api/notification.js",
+  "/dashboard/orders": "pages/dashboard/orders.js",
   "/api/auth/[...nextauth]": "pages/api/auth/[...nextauth].js",
+  "/api/notification": "pages/api/notification.js",
+  "/api/home/wishlist": "pages/api/home/wishlist.js",
   "/api/home/settings": "pages/api/home/settings.js",
+  "/": "pages/index.js",
   "/api/product": "pages/api/product.js",
-  "/api/home/wishlist": "pages/api/home/wishlist.js"
+  "/dashboard/product": "pages/dashboard/product.js",
+  "/api/dashboard": "pages/api/dashboard.js"
 }

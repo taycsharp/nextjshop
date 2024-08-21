@@ -29,6 +29,12 @@
       "static/chunks/node_modules_react-apexcharts_dist_react-apexcharts_min_js.js"
     ]
   },
+  "../components/Dashboard/profitSales.js -> react-apexcharts": {
+    "id": "../components/Dashboard/profitSales.js -> react-apexcharts",
+    "files": [
+      "static/chunks/node_modules_react-apexcharts_dist_react-apexcharts_min_js.js"
+    ]
+  },
   "../components/Layout/Client/cartView.js -> ~/components/Image": {
     "id": "../components/Layout/Client/cartView.js -> ~/components/Image",
     "files": [
@@ -137,6 +143,12 @@
       "static/chunks/components_Layout_Dashboard_layout_js.js"
     ]
   },
+  "../components/Shop/Product/productDetails.js -> react-responsive-carousel": {
+    "id": "../components/Shop/Product/productDetails.js -> react-responsive-carousel",
+    "files": [
+      "static/chunks/node_modules_react-responsive-carousel_lib_js_index_js.js"
+    ]
+  },
   "../lib/clientFunctions.js -> axios": {
     "id": "../lib/clientFunctions.js -> axios",
     "files": [
@@ -216,7 +228,7 @@
   "dashboard/product/index.js -> ~/components/Ui/Modal/modal": {
     "id": "dashboard/product/index.js -> ~/components/Ui/Modal/modal",
     "files": [
-      "static/chunks/components_Ui_Modal_modal_js.js"
+      "static/chunks/components_Ui_Modal_modal_js-_4a711.js"
     ]
   },
   "dashboard/product/index.js -> ~/components/Ui/Spinner": {
@@ -229,6 +241,60 @@
     "id": "dashboard/product/index.js -> ~/components/tableFilter",
     "files": [
       "static/chunks/components_tableFilter_index_js.js"
+    ]
+  },
+  "index.js -> ~/components/Banner/banner": {
+    "id": "index.js -> ~/components/Banner/banner",
+    "files": [
+      "static/chunks/components_Banner_banner_js.js"
+    ]
+  },
+  "index.js -> ~/components/Brand/brandList": {
+    "id": "index.js -> ~/components/Brand/brandList",
+    "files": [
+      "static/chunks/components_Brand_brandList_js.js"
+    ]
+  },
+  "index.js -> ~/components/Categories/categoriesList": {
+    "id": "index.js -> ~/components/Categories/categoriesList",
+    "files": [
+      "static/chunks/components_Categories_categoriesList_js.js"
+    ]
+  },
+  "index.js -> ~/components/Collection/collection": {
+    "id": "index.js -> ~/components/Collection/collection",
+    "files": [
+      "static/chunks/components_Collection_collection_js.js"
+    ]
+  },
+  "index.js -> ~/components/Header/header": {
+    "id": "index.js -> ~/components/Header/header",
+    "files": [
+      "static/chunks/components_Header_header_js.js"
+    ]
+  },
+  "index.js -> ~/components/ProductListView": {
+    "id": "index.js -> ~/components/ProductListView",
+    "files": [
+      "static/chunks/components_ProductListView_index_js.js"
+    ]
+  },
+  "index.js -> ~/components/Shop/Product/productDetails": {
+    "id": "index.js -> ~/components/Shop/Product/productDetails",
+    "files": [
+      "static/chunks/components_Shop_Product_productDetails_js.js"
+    ]
+  },
+  "index.js -> ~/components/Ui/Modal/modal": {
+    "id": "index.js -> ~/components/Ui/Modal/modal",
+    "files": [
+      "static/chunks/components_Ui_Modal_modal_js-_4a710.js"
+    ]
+  },
+  "index.js -> ~/components/error/500": {
+    "id": "index.js -> ~/components/error/500",
+    "files": [
+      "static/chunks/components_error_500_js.js"
     ]
   }
 }

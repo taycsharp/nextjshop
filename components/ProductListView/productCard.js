@@ -62,27 +62,26 @@ function ProductCard(props) {
   );
 
   function priceDetails() {
+    const { price, discount } = props.data;
+    const currencyFormatter = new Intl.NumberFormat('vi-VN', {
+      style: 'currency',
+      currency: 'VND',
+    });
+  
     return (
       <>
-        <p
-          className={
-            props.data.discount < props.data.price
-              ? classes.price_ori
-              : classes.price_a
-          }
-        >
-          {settings.settingsData.currency.symbol}
-          {props.data.price}
+        <p className={discount < price ? classes.price_ori : classes.price_a}>
+          {currencyFormatter.format(price)}
         </p>
-        {props.data.discount < props.data.price && (
+        {discount < price && (
           <p className={classes.price_a}>
-            {settings.settingsData.currency.symbol}
-            {props.data.discount}
+            {currencyFormatter.format(discount)}
           </p>
         )}
       </>
     );
   }
+  
 }
 
 export default ProductCard;

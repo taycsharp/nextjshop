@@ -347,7 +347,7 @@ const ProductForm = () => {
                 step="0.01"
                 id="inp-4"
                 className="form-control"
-                name="cost_price"
+                name="_price"
                 required
                 onWheel={(e) => e.target.blur()}
               />

@@ -53,6 +53,8 @@ export default async function apiHandler(req, res) {
           },
         });
 
+        console.log(orders[0].products);
+
         // Calculate sales and profit for each month
         for (let ord of orders) {
           for (let product of ord.products) {

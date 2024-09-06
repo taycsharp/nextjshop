@@ -51,6 +51,7 @@ function ProductDetailsPage({ data, error }) {
       return obj._id !== data.product._id;
     });
   const { t } = useTranslation();
+  
   useEffect(() => {
     if (data && data.product) {
       setPrice(data.product.discount);
@@ -72,6 +73,13 @@ function ProductDetailsPage({ data, error }) {
       }
     }
   }, [data]);
+
+  const formatCurrency = (amount) => {
+    return new Intl.NumberFormat('vi-VN', {
+      style: 'currency',
+      currency: 'VND',
+    }).format(amount);
+  };
 
   const checkVariantInfo = (color, attr) => {
     const colorName = color || selectedColor.name;
@@ -266,13 +274,11 @@ function ProductDetailsPage({ data, error }) {
                     <div>
                       {data.product.discount < data.product.price && (
                         <p className={classes.price_ori}>
-                          {settings.settingsData.currency.symbol}
-                          {data.product.price}
+                          {formatCurrency(data.product.price)}
                         </p>
                       )}
                       <p className={classes.price}>
-                        {settings.settingsData.currency.symbol}
-                        {price}
+                        {formatCurrency(price)}
                       </p>
                     </div>
                     <p className={classes.description}>

@@ -71,6 +71,13 @@ const Product = ({
   const itemLink = link ? link : `/gallery?slug=${product.slug}`;
   const ItemLayout = layout ? layout : "col-lg-3 col-md-4 col-6";
 
+  const formatCurrency = (amount) => {
+    return new Intl.NumberFormat('vi-VN', {
+      style: 'currency',
+      currency: 'VND',
+    }).format(amount);
+  };
+
   return (
     <div className={`${c.item} ${ItemLayout}`}>
       <div
@@ -123,18 +130,14 @@ const Product = ({
             <p className={c.unit}>{`${product.unitValue} ${product.unit}`}</p>
             <div className={c.price_con}>
               {product.discount < product.price && (
-                <p className={c.price}>
-                  {settings.settingsData.currency.symbol}
-                  {product.discount}
-                </p>
+                <p className={c.price}>{formatCurrency(product.discount)}</p>
               )}
               <p
                 className={
                   product.discount < product.price ? c.price_ori : c.price
                 }
               >
-                {settings.settingsData.currency.symbol}
-                {product.price}
+                {formatCurrency(product.price)}
               </p>
             </div>
           </div>

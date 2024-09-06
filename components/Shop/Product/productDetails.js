@@ -38,6 +38,7 @@ const ProductDetails = (props) => {
   const cartData = useSelector((state) => state.cart);
   const settings = useSelector((state) => state.settings);
   const { t } = useTranslation();
+  
   useEffect(() => {
     if (data && data.product) {
       setPrice(data.product.discount);
@@ -74,7 +75,6 @@ const ProductDetails = (props) => {
         updatePrice(null, selectedAttribute.name);
       }
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedColor, selectedAttribute]);
 
   if (error) return <div className="text-danger">failed to load</div>;
@@ -184,6 +184,13 @@ const ProductDetails = (props) => {
     return thumbList;
   };
 
+  const formatCurrency = (amount) => {
+    return new Intl.NumberFormat('vi-VN', {
+      style: 'currency',
+      currency: 'VND',
+    }).format(amount);
+  };
+
   return (
     <div className={classes.container}>
       <div className="row">
@@ -223,13 +230,11 @@ const ProductDetails = (props) => {
             <div>
               {data.product.discount < data.product.price && (
                 <p className={classes.price_ori}>
-                  {settings.settingsData.currency.symbol}
-                  {data.product.price}
+                  {formatCurrency(data.product.price)}
                 </p>
               )}
               <p className={classes.price}>
-                {settings.settingsData.currency.symbol}
-                {price}
+                {formatCurrency(price)}
               </p>
             </div>
             <p className={classes.description}>
